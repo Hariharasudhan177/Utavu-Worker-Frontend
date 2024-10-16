@@ -19,6 +19,12 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Choose the version of Node.js you need
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
       - name: Install Dependencies
         run: npm install
         working-directory: ./UtavuWorkerFrontend
